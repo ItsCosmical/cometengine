@@ -73,6 +73,40 @@ $badge-border: var(--badge-border);
 
 $page-background: var(--page-background);
 $page-foreground: var(--page-foreground);
+/* --- COMET ENGINE: TB3 TEXT-BASED OVERRIDE --- */
+:root {
+    /* This forces the main UI variables to black/green */
+    --ui-primary: #000000 !important;
+    --ui-white: #00ff41 !important;
+    --text-primary: #00ff41 !important;
+}
+
+/* Force Terminal Backgrounds */
+.blocklyMainBackground, .blocklySvg, [class*="gui_page-wrapper"] {
+    fill: #000000 !important;
+    background-color: #000000 !important;
+}
+
+/* Tb3 Signature: Green Outlines & Text */
+.blocklyPath {
+    fill: #000000 !important;
+    stroke: #00ff41 !important;
+    stroke-width: 1.5px !important;
+}
+
+.blocklyText, * {
+    fill: #00ff41 !important;
+    color: #00ff41 !important;
+    font-family: 'Courier New', Courier, monospace !important;
+    text-shadow: 0 0 3px #00ff41;
+}
+
+/* Darken Sidebar/Menus */
+[class*="gui_menu-bar"], [class*="asset-panel"] {
+    background-color: #050505 !important;
+    border: 1px solid #00ff41 !important;
+}
+
 
 $project-title-inactive: var(--project-title-inactive);
 $project-title-hover: var(--project-title-hover);
